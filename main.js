@@ -78,13 +78,15 @@ var checkWinner = function() {
   for(var key in moves){
     var movesStr = moves[key].toString();
     for(var i = 0; i < winningmoves.length; i++){
+      console.log('movesStr', movesStr)
+      console.log('winningmoves', winningmoves[i])
       if(movesStr === winningmoves[i]){
         winner = true;
       }
     }
   }
   if(winner){
-    prompt('player' + turn + ' won!')
+    console.log('player' + turn + ' won!')
   } else {
     round();
   }
